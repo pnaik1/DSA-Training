@@ -1,11 +1,10 @@
+package firstTask;
 import java.util.*;
-import java.io.*;
 public class Task {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         while(true) {
         System.out.println("Enter type of the input : Integer or String or exit ");
-
        String in;
         in=sc.next();
         switch (in) {
@@ -101,9 +100,6 @@ public class Task {
          String s=p.substring(i,p.length());
          permutation(f+ch+s,str.substring(1));
      }
-
-
-
     }
     static void partitions(String p,String str) {
      ArrayList <String> cur=new ArrayList<>();
@@ -130,5 +126,4 @@ public class Task {
        else
            return false;
    }
-
 }
