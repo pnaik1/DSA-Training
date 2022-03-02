@@ -8,8 +8,8 @@ public class Task {
        String in;
         in=sc.next();
         switch (in) {
-                case "Integer":
-                {System.out.println("1.Reverse the number");
+                case "Integer":{
+                    System.out.println("1.Reverse the number");
                     System.out.println("2.Check if palindrome or not");
                     System.out.println("3.Armstrong number or not");
                     int i = sc.nextInt();
@@ -33,11 +33,11 @@ public class Task {
                         subsequence("",str);
                     else if (j == 2)
                         permutation("",str);
-                    else if (j == 3)
-                    {
+                    else if (j == 3){
                       partitions("",str);}
-                    break;}
-            case "exit" : return;
+                    break;
+                    }
+                case "exit" : return;
             }
         }
     }
