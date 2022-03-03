@@ -31,8 +31,11 @@ public class Task {
                     String str=sc.next();
                     if (j == 1)
                         subsequence("",str);
-                    else if (j == 2)
-                        permutation("",str);
+                    else if (j == 2){
+                        TreeSet<String> list=new TreeSet<>();
+                        permutation("", str,list);
+                        System.out.println(list)
+                    }    
                     else if (j == 3){
                       partitions("",str);}
                     break;
@@ -88,9 +91,9 @@ public class Task {
        subsequence(p,str.substring(1));
        subsequence(p+ch,str.substring(1));
     }
-    static void permutation(String p,String str){
+    static void permutation(String p,String str,TreeSet<String> list){
      if(str.isEmpty()) {
-         System.out.println(p);
+         list.add(p);
          return;
      }
      char ch=str.charAt(0);
@@ -98,7 +101,7 @@ public class Task {
      {
          String f=p.substring(0,i);
          String s=p.substring(i,p.length());
-         permutation(f+ch+s,str.substring(1));
+         permutation(f+ch+s,str.substring(1),list);
      }
     }
     static void partitions(String p,String str) {
