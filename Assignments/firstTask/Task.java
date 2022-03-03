@@ -34,7 +34,7 @@ public class Task {
                     else if (j == 2){
                         TreeSet<String> list=new TreeSet<>();
                         permutation("", str,list);
-                        System.out.println(list)
+                        System.out.println(list);
                     }    
                     else if (j == 3){
                       partitions("",str);}
